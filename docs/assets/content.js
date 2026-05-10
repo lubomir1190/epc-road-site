@@ -36,7 +36,7 @@ window.SITE_CONTENT = {
     { name: "EPC", image: "assets/images/epc-logo-gold.png", url: "https://www.facebook.com/EvtimovPerformanceCenter" },  
     { name: "Legion Broker", image: "assets/images/legion.png", url: "https://legionbroker.bg/" },
     { name: "Бент Ойл АД", image: "assets/images/partner1.jpg", url: "https://www.bentoil.com/" },
-    { name: "Агромаркет", image: "assets/images/partner2.png", url: "https://argo-market.com/" },
+    { name: "Аргомаркет", image: "assets/images/partner2.png", url: "https://argo-market.com/" },
     { name: "13 Авто школа", image: "assets/images/13avto.png", url: "https://avtoshkola13.bg" },
     { name: "ВВЦ Ауто", image: "assets/images/vvc-auto.png", url: "https://vvc-auto.mobile.bg/" },
     { name: "Online Sapani", image: "assets/images/onlinesapani.png", url: "https://onlinesapani.com/" },
