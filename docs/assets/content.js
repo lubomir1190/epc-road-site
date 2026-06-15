@@ -5,33 +5,6 @@ window.SITE_CONTENT = {
   phoneDisplay: "0877 360 333",
   phoneHref: "+359877360333",
 
-  services: [
-    {
-      title: "Репатрак",
-      price: "от 60 €",
-      text: "Транспортиране на аварирал автомобил в София и региона.",
-      icon: "🚛"
-    },
-    {
-      title: "Аварийна помощ",
-      price: "по договаряне",
-      text: "Подаване на ток, смяна на гума, съдействие при повреда, ПТП или невъзможност за движение.",
-      icon: "⚠️"
-    },
-    {
-      title: "Транспорт на техника",
-      price: "по заявка",
-      text: "Превоз на техника, мотори и други товари според конкретния случай.",
-      icon: "🏗️"
-    },
-    {
-      title: "Денонощна реакция",
-      price: "24/7",
-      text: "Обаждане по всяко време при нужда от помощ на пътя.",
-      icon: "⏱️"
-    }
-  ],
-
   partners: [
     { name: "EPC", image: "assets/images/epc-logo-gold.png", url: "https://www.facebook.com/EvtimovPerformanceCenter" },  
     { name: "Legion Broker", image: "assets/images/legion.png", url: "https://legionbroker.bg/" },

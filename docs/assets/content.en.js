@@ -1,0 +1,17 @@
+window.SITE_CONTENT = {
+  phoneDisplay: "0877 360 333",
+  phoneHref: "+359877360333",
+
+  partners: [
+    { name: "EPC", image: "../assets/images/epc-logo-gold.png", url: "https://www.facebook.com/EvtimovPerformanceCenter" },
+    { name: "Legion Broker", image: "../assets/images/legion.png", url: "https://legionbroker.bg/" },
+    { name: "Bent Oil", image: "../assets/images/partner1.jpg", url: "https://www.bentoil.com/" },
+    { name: "Argomarket", image: "../assets/images/partner2.png", url: "https://argo-market.com/" },
+    { name: "13 Driving School", image: "../assets/images/13avto.png", url: "https://avtoshkola13.bg" },
+    { name: "VVC Auto", image: "../assets/images/vvc-auto.png", url: "https://vvc-auto.mobile.bg/" },
+    { name: "Online Sapani", image: "../assets/images/onlinesapani.png", url: "https://onlinesapani.com/" },
+    { name: "Power Hold", image: "../assets/images/powerhold.png", url: "https://www.facebook.com/profile.php?id=61582219953870#" },
+    { name: "Extreme Service", image: "../assets/images/extreme-service.jpg", url: "https://m.facebook.com/pages/Extreme-Service/179971012138353" },
+    { name: "Team Mark", image: "../assets/images/teammark.webp", url: "https://www.team-mark.com" }
+  ]
+};

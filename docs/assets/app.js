@@ -8,18 +8,6 @@ document.querySelectorAll("[data-phone-link]").forEach(el => {
   el.href = `tel:${cfg.phoneHref || "+359877360333"}`;
 });
 
-const servicesGrid = document.getElementById("servicesGrid");
-if (servicesGrid && Array.isArray(cfg.services)) {
-  servicesGrid.innerHTML = cfg.services.map(item => `
-    <article class="service-card reveal">
-      <div class="service-icon">${item.icon}</div>
-      <h3>${item.title}</h3>
-      <p>${item.text}</p>
-      <strong>${item.price}</strong>
-    </article>
-  `).join("");
-}
-
 const partnersGrid = document.getElementById("partnersGrid");
 if (partnersGrid && Array.isArray(cfg.partners)) {
   partnersGrid.innerHTML = cfg.partners.map(partner => {

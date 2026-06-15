@@ -7,6 +7,18 @@
   <meta name="description" content="EPC – пътна помощ 24/7 в София и София област. Репатрак, аварийна помощ и транспорт на автомобили. Обади се: 0877 360 333" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://epc24.bg/" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="bg" href="https://epc24.bg/" />
+  <link rel="alternate" hreflang="en" href="https://epc24.bg/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://epc24.bg/" />
+
+  <!-- Geo -->
+  <meta name="geo.region" content="BG-22" />
+  <meta name="geo.placename" content="София" />
+  <meta name="geo.position" content="42.6977;23.3219" />
+  <meta name="ICBM" content="42.6977, 23.3219" />
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
   <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png" />
   <link rel="apple-touch-icon" href="assets/images/favicon-96x96.png" />
@@ -18,30 +30,85 @@
   <meta property="og:title" content="EPC | Пътна помощ 24/7 – София и област" />
   <meta property="og:description" content="EPC – пътна помощ 24/7 в София и София област. Репатрак, аварийна помощ и транспорт на автомобили. Обади се: 0877 360 333" />
   <meta property="og:image" content="https://epc24.bg/assets/images/truck.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="bg_BG" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EPC | Пътна помощ 24/7 – София и област" />
+  <meta name="twitter:description" content="EPC – пътна помощ 24/7 в София и София област. Репатрак, аварийна помощ и транспорт на автомобили. Обади се: 0877 360 333" />
+  <meta name="twitter:image" content="https://epc24.bg/assets/images/truck.jpg" />
 
   <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://epc24.bg/#business",
     "name": "EPC Пътна помощ",
     "description": "Пътна помощ 24/7 в София и Софийска област. Репатрак, аварийна помощ и транспорт на автомобили.",
     "url": "https://epc24.bg",
     "telephone": "+359877360333",
     "openingHours": "Mo-Su 00:00-24:00",
+    "currenciesAccepted": "EUR, BGN",
+    "paymentAccepted": "Cash, Credit Card",
     "areaServed": ["София", "Софийска област", "Люлин", "Младост", "Надежда", "Дружба", "Обеля", "Връбница", "Красна поляна", "Лозенец", "Витоша", "Овча купел", "Бояна", "Симеоново", "Банкя", "Бухово", "Нови Искър", "Самоков", "Ботевград", "Елин Пелин", "Костинброд", "Сливница", "Своге", "Правец"],
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "ул. Панайот Волов 55",
       "addressLocality": "София",
       "addressCountry": "BG"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.6977,
+      "longitude": 23.3219
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+359877360333",
+      "contactType": "customer service",
+      "availableLanguage": "Bulgarian",
+      "hoursAvailable": "Mo-Su 00:00-24:00"
     },
     "image": "https://epc24.bg/assets/images/truck.jpg",
     "priceRange": "$$",
     "sameAs": [
       "https://www.facebook.com/putnapomosht.epc/",
-      "https://www.instagram.com/putnapomosht.epc/"
+      "https://www.instagram.com/putnapomosht.epc/",
+      "https://www.google.com/maps/place//data=!4m2!3m1!1s0x49a045a0f98db09:0x9aeae7a767bee425"
     ]
+  }
+  </script>
+
+  <!-- Service structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Репатрак София",
+    "description": "Репатрак и транспорт на леки автомобили и джипове в София и Софийска област. Денонощна услуга 24/7.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://epc24.bg/#business"
+    },
+    "areaServed": "София и Софийска област",
+    "offers": {
+      "@type": "Offer",
+      "price": "60",
+      "priceCurrency": "EUR",
+      "description": "Репатрак в гр. София — леки автомобили и джипове до 1900 кг"
+    },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "servicePhone": {
+        "@type": "ContactPoint",
+        "telephone": "+359877360333",
+        "contactType": "customer service",
+        "availableLanguage": "Bulgarian"
+      }
+    }
   }
   </script>
 
@@ -120,6 +187,7 @@
         <a href="#services">Услуги / Цени</a>
         <a href="#contacts">Контакти</a>
         <a href="#partners">Партньори</a>
+        <a href="/en/">🇬🇧 EN</a>
       </nav>
 
       <a class="header-phone" href="tel:+359877360333" data-phone-link>
@@ -196,7 +264,32 @@
 	  <p>Репатрак, аварийна помощ и транспорт — бърза реакция при нужда.</p>
         </div>
 
-        <div class="services-grid" id="servicesGrid"></div>
+        <div class="services-grid" id="servicesGrid">
+          <article class="service-card reveal">
+            <div class="service-icon">🚛</div>
+            <h3>Репатрак</h3>
+            <p>Транспортиране на аварирал автомобил в София и региона.</p>
+            <strong>от 60 €</strong>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">⚠️</div>
+            <h3>Аварийна помощ</h3>
+            <p>Подаване на ток, смяна на гума, съдействие при повреда, ПТП или невъзможност за движение.</p>
+            <strong>по договаряне</strong>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">🏗️</div>
+            <h3>Транспорт на техника</h3>
+            <p>Превоз на техника, мотори и други товари според конкретния случай.</p>
+            <strong>по заявка</strong>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">⏱️</div>
+            <h3>Денонощна реакция</h3>
+            <p>Обаждане по всяко време при нужда от помощ на пътя.</p>
+            <strong>24/7</strong>
+          </article>
+        </div>
 
         <div class="pricing-table reveal">
           <p class="pricing-subtitle">Репатрак — леки автомобили и джипове до 1900 кг</p>
@@ -263,7 +356,9 @@
             <li>Банкя, Бухово, Нови Искър</li>
             <li>Самоков, Ботевград, Елин Пелин</li>
             <li>Костинброд, Сливница, Своге, Правец</li>
-            <li>Околовръстен път и основни пътни направления</li>
+            <li>Околовръстен път — целия пръстен</li>
+            <li>А1 Магистрала Тракия (Sofia – Plovdiv)</li>
+            <li>А2 Магистрала Хемус (Sofia – Botevgrad)</li>
           </ul>
         </div>
 
@@ -332,6 +427,9 @@
             <span>☎</span>
             <strong data-phone-text>0877 360 333</strong>
           </a>
+          <address class="contact-address">
+            <span>📍</span> ул. Панайот Волов 55, София
+          </address>
         </div>
 
         <div class="steps-box reveal">
@@ -382,7 +480,7 @@
     <section class="seo-section">
       <div class="container">
         <p>
-          EPC предлага денонощна пътна помощ и репатрак в София и Софийска област. Обслужваме всички квартали на столицата — Люлин, Младост, Надежда, Дружба, Обеля, Връбница, Красна поляна, Лозенец, Витоша, Овча купел, Бояна и Симеоново. Извън града работим в Банкя, Самоков, Ботевград, Елин Пелин, Костинброд, Сливница, Своге, Правец и околните селища. При авария, нужда от репатриране или транспорт на автомобил — обади се на 0877 360 333.
+          EPC предлага денонощна пътна помощ и репатрак в София и Софийска област. Обслужваме всички квартали на столицата — Люлин, Младост, Надежда, Дружба, Обеля, Връбница, Красна поляна, Лозенец, Витоша, Овча купел, Бояна и Симеоново. Извън града работим в Банкя, Самоков, Ботевград, Елин Пелин, Костинброд, Сливница, Своге, Правец и околните селища. Предлагаме пътна помощ и на Околовръстния, А1 Магистрала Тракия (отсечката при София) и А2 Магистрала Хемус (до Ботевград). При авария, нужда от репатриране или транспорт на автомобил — обади се на 0877 360 333.
           <span style="display:none" aria-hidden="true">0877360333</span>
         </p>
       </div>
@@ -392,8 +490,9 @@
     <footer class="footer">
     <div class="container footer-inner">
       <div class="company-info">
-        <p>Зет Хаш Дизайн ООД</p>
-        <p>ЕИК: 207107081</p>
+        <p>EPC Пътна помощ</p>
+        <p>ул. Панайот Волов 55, София</p>
+        <p>Зет Хаш Дизайн ООД | ЕИК: 207107081</p>
         <p>© <span id="year"></span> Всички права запазени.</p>
       </div>
 

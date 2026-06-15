@@ -1,0 +1,16 @@
+{
+  "name": "EPC Пътна помощ",
+  "short_name": "EPC",
+  "description": "Пътна помощ 24/7 в София и Софийска област",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#111111",
+  "theme_color": "#f4c430",
+  "icons": [
+    {
+      "src": "assets/images/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ]
+}

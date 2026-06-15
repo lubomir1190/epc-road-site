@@ -449,6 +449,13 @@ h2 {
 .big-phone span { font-size: 31px; }
 .big-phone strong { font-size: clamp(28px, 5vw, 48px); }
 
+.contact-address {
+  font-style: normal;
+  margin-top: 14px;
+  color: var(--text-muted, #aaa);
+  font-size: 0.95rem;
+}
+
 .steps-box ol { margin-bottom: 0; padding-left: 22px; }
 
 .faq-grid {
