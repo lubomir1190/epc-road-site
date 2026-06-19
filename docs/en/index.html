@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EPC | 24/7 Roadside Assistance Sofia | Tow Truck | 0877 360 333</title>
-  <meta name="description" content="EPC – 24/7 roadside assistance in Sofia, Bulgaria. Tow truck, breakdown service and vehicle transport. A1 Trakia, A2 Hemus, Ring Road. Call: 0877 360 333" />
+  <title>EPC Roadside Assistance Sofia 24/7 — Tow Truck & Breakdown Service</title>
+  <meta name="description" content="24/7 mobile roadside assistance in Sofia and Sofia Region. Tow truck, breakdown service, vehicle transport — we come to you. A1 Trakia, A2 Hemus, Ring Road. Call: 0877 360 333" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://epc24.bg/en/" />
   <link rel="manifest" href="../manifest.json" />
@@ -14,11 +14,11 @@
   <link rel="alternate" hreflang="en" href="https://epc24.bg/en/" />
   <link rel="alternate" hreflang="x-default" href="https://epc24.bg/" />
 
-  <!-- Geo -->
+  <!-- Geo: mobile service area centred on Sofia region -->
   <meta name="geo.region" content="BG-22" />
-  <meta name="geo.placename" content="Sofia" />
-  <meta name="geo.position" content="42.6977;23.3219" />
-  <meta name="ICBM" content="42.6977, 23.3219" />
+  <meta name="geo.placename" content="Sofia and Sofia Region" />
+  <meta name="geo.position" content="42.7500;23.2700" />
+  <meta name="ICBM" content="42.7500, 23.2700" />
 
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
   <link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon-96x96.png" />
@@ -28,8 +28,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://epc24.bg/en/" />
-  <meta property="og:title" content="EPC | 24/7 Roadside Assistance Sofia, Bulgaria" />
-  <meta property="og:description" content="EPC – 24/7 tow truck and roadside assistance in Sofia, Bulgaria. A1 Trakia, A2 Hemus, Ring Road. Call: 0877 360 333" />
+  <meta property="og:title" content="EPC Roadside Assistance Sofia 24/7 — Tow Truck & Breakdown Service" />
+  <meta property="og:description" content="24/7 mobile tow truck and roadside assistance in Sofia and Sofia Region. We come to you. A1 Trakia, A2 Hemus, Ring Road. Call: 0877 360 333" />
   <meta property="og:image" content="https://epc24.bg/assets/images/truck.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -38,48 +38,81 @@
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="EPC | 24/7 Roadside Assistance Sofia, Bulgaria" />
-  <meta name="twitter:description" content="EPC – 24/7 tow truck and roadside assistance in Sofia, Bulgaria. A1, A2, Ring Road. Call: 0877 360 333" />
+  <meta name="twitter:title" content="EPC Roadside Assistance Sofia 24/7 — Tow Truck & Breakdown Service" />
+  <meta name="twitter:description" content="24/7 mobile tow truck and roadside assistance in Sofia and Sofia Region. We come to you. Call: 0877 360 333" />
   <meta name="twitter:image" content="https://epc24.bg/assets/images/truck.jpg" />
 
-  <!-- LocalBusiness structured data -->
+  <!-- Structured data: mobile service-area business (no storefront) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["AutomotiveBusiness", "EmergencyService"],
     "@id": "https://epc24.bg/#business",
     "name": "EPC Roadside Assistance",
     "alternateName": "EPC Пътна помощ",
-    "description": "24/7 roadside assistance in Sofia, Bulgaria. Tow truck, breakdown service and vehicle transport.",
+    "description": "24/7 mobile roadside assistance in Sofia and Sofia Region, Bulgaria. Tow truck, breakdown service and vehicle transport — we come to you.",
     "url": "https://epc24.bg/en/",
     "telephone": "+359877360333",
-    "openingHours": "Mo-Su 00:00-24:00",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }],
     "currenciesAccepted": "EUR, BGN",
     "paymentAccepted": "Cash, Credit Card",
-    "areaServed": ["Sofia", "Sofia Region", "Sofia Ring Road", "A1 Trakia Motorway", "A2 Hemus Motorway", "Bankya", "Samokov", "Botevgrad", "Elin Pelin", "Kostinbrod", "Slivnitsa", "Svoge", "Pravets"],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "ul. Panayot Volov 55",
-      "addressLocality": "Sofia",
+      "addressRegion": "Sofia Region",
       "addressCountry": "BG"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 42.6977,
-      "longitude": 23.3219
+    "areaServed": [
+      { "@type": "City", "name": "Sofia" },
+      { "@type": "City", "name": "Kostinbrod" },
+      { "@type": "City", "name": "Bankya" },
+      { "@type": "City", "name": "Bozhurishte" },
+      { "@type": "City", "name": "Novi Iskar" },
+      { "@type": "City", "name": "Slivnitsa" },
+      { "@type": "City", "name": "Svoge" },
+      { "@type": "City", "name": "Samokov" },
+      { "@type": "City", "name": "Botevgrad" },
+      { "@type": "City", "name": "Elin Pelin" },
+      { "@type": "City", "name": "Pravets" },
+      { "@type": "AdministrativeArea", "name": "Sofia Region" }
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.7500,
+        "longitude": 23.2700
+      },
+      "geoRadius": "60000"
     },
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+359877360333",
-      "contactType": "customer service",
+      "contactType": "emergency",
       "availableLanguage": ["Bulgarian", "English"],
       "hoursAvailable": "Mo-Su 00:00-24:00"
     },
-    "image": "https://epc24.bg/assets/images/truck.jpg",
+    "image": [
+      "https://epc24.bg/assets/images/truck.jpg",
+      "https://epc24.bg/assets/images/truck2.png"
+    ],
+    "logo": "https://epc24.bg/assets/images/epc-logo-cut.png",
     "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "8",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "sameAs": [
       "https://www.facebook.com/putnapomosht.epc/",
       "https://www.instagram.com/putnapomosht.epc/",
+      "https://www.tiktok.com/@putnapomosht.epc",
       "https://www.google.com/maps/place//data=!4m2!3m1!1s0x49a045a0f98db09:0x9aeae7a767bee425"
     ]
   }
@@ -132,13 +165,22 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Tow Truck Sofia",
+    "serviceType": "Tow truck and roadside assistance",
+    "name": "Tow Truck Sofia and Sofia Region",
     "description": "24/7 tow truck and vehicle towing in Sofia and Sofia Region, including A1 Trakia and A2 Hemus motorways.",
     "provider": {
-      "@type": "LocalBusiness",
+      "@type": "AutomotiveBusiness",
       "@id": "https://epc24.bg/#business"
     },
-    "areaServed": "Sofia and Sofia Region, Bulgaria",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.7500,
+        "longitude": 23.2700
+      },
+      "geoRadius": "60000"
+    },
     "offers": {
       "@type": "Offer",
       "price": "60",
@@ -150,7 +192,7 @@
       "servicePhone": {
         "@type": "ContactPoint",
         "telephone": "+359877360333",
-        "contactType": "customer service",
+        "contactType": "emergency",
         "availableLanguage": ["Bulgarian", "English"]
       }
     }
@@ -209,7 +251,7 @@
           <div class="hero-title-lockup">
             <img class="hero-epc-logo" src="../assets/images/epc-logo-cut.png" alt="EPC">
             <div class="hero-title-row">
-              <h1><span>24/7 Roadside Assistance Sofia</span></h1>
+              <h1><span>24/7 Roadside Assistance in Sofia & Region</span></h1>
               <a class="hero-vip-card" href="#vip" aria-label="VIP card 20 percent discount">
                 <span class="hero-vip-label">VIP card</span>
                 <strong>20%</strong>
@@ -384,18 +426,18 @@
           <h2>Real equipment in action</h2>
         </div>
         <div class="gallery-grid">
-          <img src="../assets/images/photos/real1.jpg" alt="EPC Roadside Assistance 1" loading="lazy" class="gallery-thumb reveal">
-          <img src="../assets/images/photos/real2.jpg" alt="EPC Roadside Assistance 2" loading="lazy" class="gallery-thumb reveal">
-          <img src="../assets/images/photos/real3.jpg" alt="EPC Roadside Assistance 3" loading="lazy" class="gallery-thumb reveal">
-          <img src="../assets/images/photos/real4.jpg" alt="EPC Roadside Assistance 4" loading="lazy" class="gallery-thumb reveal">
-          <img src="../assets/images/photos/real5.jpg" alt="EPC Roadside Assistance 5" loading="lazy" class="gallery-thumb reveal">
-          <img src="../assets/images/photos/real6.jpg" alt="EPC Roadside Assistance 6" loading="lazy" class="gallery-thumb reveal">
-          <img src="../assets/images/photos/real7.jpg" alt="EPC Roadside Assistance 7" loading="lazy" class="gallery-thumb reveal">
-          <img src="../assets/images/photos/real8.jpg" alt="EPC Roadside Assistance 8" loading="lazy" class="gallery-thumb reveal">
-          <img src="../assets/images/photos/real9.jpg" alt="EPC Roadside Assistance 9" loading="lazy" class="gallery-thumb reveal">
-          <img src="../assets/images/photos/real10.jpg" alt="EPC Roadside Assistance 10" loading="lazy" class="gallery-thumb reveal">
-          <img src="../assets/images/photos/real11.jpg" alt="EPC Roadside Assistance 11" loading="lazy" class="gallery-thumb reveal">
-          <img src="../assets/images/photos/real12.jpg" alt="EPC Roadside Assistance 12" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real1.jpg" alt="EPC tow truck loading a car in Sofia" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real2.jpg" alt="EPC roadside assistance — broken down vehicle" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real3.jpg" alt="EPC tow truck transporting a vehicle" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real4.jpg" alt="EPC tow truck on the road in Sofia Region" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real5.jpg" alt="EPC emergency roadside assistance at night" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real6.jpg" alt="EPC tow truck transporting an SUV" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real7.jpg" alt="EPC roadside assistance on the motorway" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real8.jpg" alt="EPC tow truck loading a passenger car" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real9.jpg" alt="24/7 EPC roadside assistance Sofia" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real10.jpg" alt="EPC tow truck — real equipment" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real11.jpg" alt="Vehicle transport between cities" loading="lazy" class="gallery-thumb reveal">
+          <img src="../assets/images/photos/real12.jpg" alt="EPC roadside assistance — accident support" loading="lazy" class="gallery-thumb reveal">
         </div>
       </div>
 
@@ -431,7 +473,7 @@
             <strong data-phone-text>0877 360 333</strong>
           </a>
           <address class="contact-address">
-            <span>📍</span> ul. Panayot Volov 55, Sofia, Bulgaria
+            <span>📍</span> We come to you — Sofia, Sofia Region and A1, A2, Ring Road
           </address>
         </div>
 
@@ -491,8 +533,8 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="company-info">
-        <p>EPC Roadside Assistance</p>
-        <p>ul. Panayot Volov 55, Sofia, Bulgaria</p>
+        <p>EPC Roadside Assistance — mobile service 24/7</p>
+        <p>Serving Sofia, Sofia Region and motorways</p>
         <p>Zet Hash Design OOD | VAT: BG207107081</p>
         <p>© <span id="year"></span> All rights reserved.</p>
       </div>

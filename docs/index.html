@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EPC | Пътна помощ 24/7 | 0877 360 333</title>
-  <meta name="description" content="EPC – пътна помощ 24/7 в София и София област. Репатрак, аварийна помощ и транспорт на автомобили. Обади се: 0877 360 333" />
+  <title>EPC Пътна помощ София 24/7 — Репатрак и аварийна помощ</title>
+  <meta name="description" content="Пътна помощ София и Софийска област 24/7. Репатрак, аварийна помощ и транспорт на автомобили — идваме на място при теб. Обади се: 0877 360 333" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://epc24.bg/" />
   <link rel="manifest" href="manifest.json" />
@@ -14,11 +14,11 @@
   <link rel="alternate" hreflang="en" href="https://epc24.bg/en/" />
   <link rel="alternate" hreflang="x-default" href="https://epc24.bg/" />
 
-  <!-- Geo -->
+  <!-- Geo: mobile service area centred on Sofia region -->
   <meta name="geo.region" content="BG-22" />
-  <meta name="geo.placename" content="София" />
-  <meta name="geo.position" content="42.6977;23.3219" />
-  <meta name="ICBM" content="42.6977, 23.3219" />
+  <meta name="geo.placename" content="София и Софийска област" />
+  <meta name="geo.position" content="42.7500;23.2700" />
+  <meta name="ICBM" content="42.7500, 23.2700" />
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
   <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png" />
   <link rel="apple-touch-icon" href="assets/images/favicon-96x96.png" />
@@ -27,8 +27,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://epc24.bg/" />
-  <meta property="og:title" content="EPC | Пътна помощ 24/7 – София и област" />
-  <meta property="og:description" content="EPC – пътна помощ 24/7 в София и София област. Репатрак, аварийна помощ и транспорт на автомобили. Обади се: 0877 360 333" />
+  <meta property="og:title" content="EPC Пътна помощ София 24/7 — Репатрак и аварийна помощ" />
+  <meta property="og:description" content="Пътна помощ София и Софийска област 24/7. Репатрак, аварийна помощ и транспорт — идваме на място при теб. Обади се: 0877 360 333" />
   <meta property="og:image" content="https://epc24.bg/assets/images/truck.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -36,47 +36,81 @@
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="EPC | Пътна помощ 24/7 – София и област" />
-  <meta name="twitter:description" content="EPC – пътна помощ 24/7 в София и София област. Репатрак, аварийна помощ и транспорт на автомобили. Обади се: 0877 360 333" />
+  <meta name="twitter:title" content="EPC Пътна помощ София 24/7 — Репатрак и аварийна помощ" />
+  <meta name="twitter:description" content="Пътна помощ София и Софийска област 24/7. Репатрак, аварийна помощ и транспорт — идваме на място при теб. 0877 360 333" />
   <meta name="twitter:image" content="https://epc24.bg/assets/images/truck.jpg" />
 
-  <!-- Structured data -->
+  <!-- Structured data: mobile service-area business (no storefront) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["AutomotiveBusiness", "EmergencyService"],
     "@id": "https://epc24.bg/#business",
     "name": "EPC Пътна помощ",
-    "description": "Пътна помощ 24/7 в София и Софийска област. Репатрак, аварийна помощ и транспорт на автомобили.",
+    "alternateName": "EPC Roadside Assistance",
+    "description": "Мобилна пътна помощ 24/7 в София и Софийска област. Репатрак, аварийна помощ и транспорт на автомобили — идваме на място при клиента.",
     "url": "https://epc24.bg",
     "telephone": "+359877360333",
-    "openingHours": "Mo-Su 00:00-24:00",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }],
     "currenciesAccepted": "EUR, BGN",
     "paymentAccepted": "Cash, Credit Card",
-    "areaServed": ["София", "Софийска област", "Люлин", "Младост", "Надежда", "Дружба", "Обеля", "Връбница", "Красна поляна", "Лозенец", "Витоша", "Овча купел", "Бояна", "Симеоново", "Банкя", "Бухово", "Нови Искър", "Самоков", "Ботевград", "Елин Пелин", "Костинброд", "Сливница", "Своге", "Правец"],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "ул. Панайот Волов 55",
-      "addressLocality": "София",
+      "addressRegion": "Софийска област",
       "addressCountry": "BG"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 42.6977,
-      "longitude": 23.3219
+    "areaServed": [
+      { "@type": "City", "name": "София" },
+      { "@type": "City", "name": "Костинброд" },
+      { "@type": "City", "name": "Банкя" },
+      { "@type": "City", "name": "Божурище" },
+      { "@type": "City", "name": "Нови Искър" },
+      { "@type": "City", "name": "Сливница" },
+      { "@type": "City", "name": "Своге" },
+      { "@type": "City", "name": "Самоков" },
+      { "@type": "City", "name": "Ботевград" },
+      { "@type": "City", "name": "Елин Пелин" },
+      { "@type": "City", "name": "Правец" },
+      { "@type": "AdministrativeArea", "name": "Софийска област" }
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.7500,
+        "longitude": 23.2700
+      },
+      "geoRadius": "60000"
     },
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+359877360333",
-      "contactType": "customer service",
-      "availableLanguage": "Bulgarian",
+      "contactType": "emergency",
+      "availableLanguage": ["Bulgarian", "English"],
       "hoursAvailable": "Mo-Su 00:00-24:00"
     },
-    "image": "https://epc24.bg/assets/images/truck.jpg",
+    "image": [
+      "https://epc24.bg/assets/images/truck.jpg",
+      "https://epc24.bg/assets/images/truck2.png"
+    ],
+    "logo": "https://epc24.bg/assets/images/epc-logo-cut.png",
     "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "8",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "sameAs": [
       "https://www.facebook.com/putnapomosht.epc/",
       "https://www.instagram.com/putnapomosht.epc/",
+      "https://www.tiktok.com/@putnapomosht.epc",
       "https://www.google.com/maps/place//data=!4m2!3m1!1s0x49a045a0f98db09:0x9aeae7a767bee425"
     ]
   }
@@ -87,13 +121,22 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Репатрак София",
+    "serviceType": "Репатрак и пътна помощ",
+    "name": "Репатрак София и Софийска област",
     "description": "Репатрак и транспорт на леки автомобили и джипове в София и Софийска област. Денонощна услуга 24/7.",
     "provider": {
-      "@type": "LocalBusiness",
+      "@type": "AutomotiveBusiness",
       "@id": "https://epc24.bg/#business"
     },
-    "areaServed": "София и Софийска област",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.7500,
+        "longitude": 23.2700
+      },
+      "geoRadius": "60000"
+    },
     "offers": {
       "@type": "Offer",
       "price": "60",
@@ -105,7 +148,7 @@
       "servicePhone": {
         "@type": "ContactPoint",
         "telephone": "+359877360333",
-        "contactType": "customer service",
+        "contactType": "emergency",
         "availableLanguage": "Bulgarian"
       }
     }
@@ -202,11 +245,11 @@
       <div class="hero-overlay"></div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Пътна помощ • София и област • 24/7</p>
+          <p class="eyebrow">Пътна помощ • София и Софийска област • 24/7</p>
           <div class="hero-title-lockup">
-            <img class="hero-epc-logo" src="assets/images/epc-logo-cut.png" alt="EPC">
+            <img class="hero-epc-logo" src="assets/images/epc-logo-cut.png" alt="EPC Пътна помощ София">
             <div class="hero-title-row">
-              <h1><span>Пътна помощ 24/7</span></h1>
+              <h1><span>Денонощна пътна помощ в София и областта</span></h1>
               <a class="hero-vip-card" href="#vip" aria-label="ВИП карта 20 процента отстъпка">
                 <span class="hero-vip-label">VIP карта</span>
                 <strong>20%</strong>
@@ -234,7 +277,7 @@
         </div>
 
         <div class="hero-card hero-truck reveal">
-          <img src="assets/images/truck2.png" alt="Репатрак EPC Пътна помощ">
+          <img src="assets/images/truck2.png" alt="Репатрак EPC — пътна помощ София 24/7">
         </div>
       </div>
     </section>
@@ -381,18 +424,18 @@
           <h2>Реална техника в действие</h2>
         </div>
         <div class="gallery-grid">
-          <img src="assets/images/photos/real1.jpg" alt="Пътна помощ EPC 1" loading="lazy" class="gallery-thumb reveal">
-          <img src="assets/images/photos/real2.jpg" alt="Пътна помощ EPC 2" loading="lazy" class="gallery-thumb reveal">
-          <img src="assets/images/photos/real3.jpg" alt="Пътна помощ EPC 3" loading="lazy" class="gallery-thumb reveal">
-          <img src="assets/images/photos/real4.jpg" alt="Пътна помощ EPC 4" loading="lazy" class="gallery-thumb reveal">
-          <img src="assets/images/photos/real5.jpg" alt="Пътна помощ EPC 5" loading="lazy" class="gallery-thumb reveal">
-          <img src="assets/images/photos/real6.jpg" alt="Пътна помощ EPC 6" loading="lazy" class="gallery-thumb reveal">
-          <img src="assets/images/photos/real7.jpg" alt="Пътна помощ EPC 7" loading="lazy" class="gallery-thumb reveal">
-          <img src="assets/images/photos/real8.jpg" alt="Пътна помощ EPC 8" loading="lazy" class="gallery-thumb reveal">
-          <img src="assets/images/photos/real9.jpg" alt="Пътна помощ EPC 9" loading="lazy" class="gallery-thumb reveal">
-          <img src="assets/images/photos/real10.jpg" alt="Пътна помощ EPC 10" loading="lazy" class="gallery-thumb reveal">
-          <img src="assets/images/photos/real11.jpg" alt="Пътна помощ EPC 11" loading="lazy" class="gallery-thumb reveal">
-          <img src="assets/images/photos/real12.jpg" alt="Пътна помощ EPC 12" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real1.jpg" alt="Репатрак EPC товари автомобил в София" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real2.jpg" alt="Пътна помощ EPC — аварирал автомобил" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real3.jpg" alt="Транспорт на автомобил с репатрак EPC" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real4.jpg" alt="Репатрак EPC на път в Софийска област" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real5.jpg" alt="Аварийна помощ EPC нощем" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real6.jpg" alt="Репатрак EPC — транспорт на джип" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real7.jpg" alt="Пътна помощ EPC на магистрала" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real8.jpg" alt="Репатрак EPC товари лек автомобил" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real9.jpg" alt="Денонощна пътна помощ EPC София" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real10.jpg" alt="Репатрак EPC — реална техника" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real11.jpg" alt="Транспорт на автомобил между градове" loading="lazy" class="gallery-thumb reveal">
+          <img src="assets/images/photos/real12.jpg" alt="Аварийна помощ EPC — съдействие при ПТП" loading="lazy" class="gallery-thumb reveal">
         </div>
       </div>
 
@@ -428,7 +471,7 @@
             <strong data-phone-text>0877 360 333</strong>
           </a>
           <address class="contact-address">
-            <span>📍</span> ул. Панайот Волов 55, София
+            <span>📍</span> Идваме на място — София, Софийска област и магистралите А1, А2 и Околовръстен път
           </address>
         </div>
 
@@ -480,7 +523,7 @@
     <section class="seo-section">
       <div class="container">
         <p>
-          EPC предлага денонощна пътна помощ и репатрак в София и Софийска област. Обслужваме всички квартали на столицата — Люлин, Младост, Надежда, Дружба, Обеля, Връбница, Красна поляна, Лозенец, Витоша, Овча купел, Бояна и Симеоново. Извън града работим в Банкя, Самоков, Ботевград, Елин Пелин, Костинброд, Сливница, Своге, Правец и околните селища. Предлагаме пътна помощ и на Околовръстния, А1 Магистрала Тракия (отсечката при София) и А2 Магистрала Хемус (до Ботевград). При авария, нужда от репатриране или транспорт на автомобил — обади се на 0877 360 333.
+          EPC предлага денонощна пътна помощ и репатрак в София и Софийска област — идваме на място при теб. Обслужваме всички квартали на столицата (Люлин, Младост, Надежда, Дружба, Обеля, Връбница, Красна поляна, Лозенец, Витоша, Овча купел, Бояна, Симеоново) и съседните общини — Банкя, Костинброд, Божурище, Нови Искър, Бухово. Извън столицата работим в Самоков, Ботевград, Елин Пелин, Сливница, Своге и Правец. Предлагаме пътна помощ и на Околовръстния, А1 Магистрала Тракия (отсечката при София) и А2 Магистрала Хемус (до Ботевград). При авария, нужда от репатриране или транспорт на автомобил — обади се на 0877 360 333.
           <span style="display:none" aria-hidden="true">0877360333</span>
         </p>
       </div>
@@ -490,8 +533,8 @@
     <footer class="footer">
     <div class="container footer-inner">
       <div class="company-info">
-        <p>EPC Пътна помощ</p>
-        <p>ул. Панайот Волов 55, София</p>
+        <p>EPC Пътна помощ — мобилна услуга 24/7</p>
+        <p>Обслужваме София, Софийска област и магистрали</p>
         <p>Зет Хаш Дизайн ООД | ЕИК: 207107081</p>
         <p>© <span id="year"></span> Всички права запазени.</p>
       </div>
