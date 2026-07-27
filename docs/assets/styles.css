@@ -1417,6 +1417,21 @@ h2 {
   opacity: .9;
 }
 
+.gallery-extra {
+  display: none;
+}
+
+.gallery-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.gallery-more-btn {
+  cursor: pointer;
+  font: inherit;
+}
+
 /* Lightbox */
 .lightbox {
   display: none;
@@ -1477,5 +1492,4 @@ h2 {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 }

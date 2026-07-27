@@ -79,6 +79,12 @@ function showPrev() {
   lightboxImg.src = thumbs[currentIndex].src;
 }
 
+const galleryMoreBtn = document.getElementById("galleryMoreBtn");
+galleryMoreBtn?.addEventListener("click", () => {
+  document.querySelectorAll(".gallery-extra").forEach(img => img.classList.remove("gallery-extra"));
+  galleryMoreBtn.remove();
+});
+
 thumbs.forEach((img, i) => img.addEventListener("click", () => openLightbox(i)));
 lightbox?.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
 lightbox?.querySelector(".lightbox-next").addEventListener("click", showNext);
