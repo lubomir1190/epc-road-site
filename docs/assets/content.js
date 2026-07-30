@@ -15,7 +15,8 @@ window.SITE_CONTENT = {
     { name: "Online Sapani", image: "assets/images/onlinesapani.png", url: "https://onlinesapani.com/" },
     { name: "Power Hold", image: "assets/images/powerhold.png", url: "https://www.facebook.com/profile.php?id=61582219953870#" },
     { name: "Extreme Service", image: "assets/images/extreme-service.jpg", url: "https://m.facebook.com/pages/Extreme-Service/179971012138353" },
-    { name: "Team Mark", image: "assets/images/teammark.webp", url: "https://www.team-mark.com" }
+    { name: "Team Mark", image: "assets/images/teammark.webp", url: "https://www.team-mark.com" },
+    { name: "Д енд Д Авто Сервиз", image: "assets/images/ddauto.png", url: "https://ddauto.bg/" }
 
   ]
 };
