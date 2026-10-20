@@ -185,7 +185,7 @@
       "@type": "Offer",
       "price": "60",
       "priceCurrency": "EUR",
-      "description": "Tow truck within Sofia city — cars and SUVs up to 1900 kg"
+      "description": "Tow truck within Sofia city — cars and SUVs up to 2000 kg"
     },
     "availableChannel": {
       "@type": "ServiceChannel",
@@ -201,6 +201,7 @@
 
   <link rel="stylesheet" href="../assets/styles.css" />
   <script defer src="../assets/content.en.js"></script>
+  <script defer src="../assets/offers.js"></script>
   <script defer src="../assets/app.js"></script>
 </head>
 
@@ -253,9 +254,9 @@
             <img class="hero-epc-logo" src="../assets/images/epc-logo-cut.png" alt="EPC">
             <div class="hero-title-row">
               <h1><span>24/7 Roadside Assistance in Sofia & Region</span></h1>
-              <a class="hero-vip-card" href="#vip" aria-label="VIP card 20 percent discount">
+              <a class="hero-vip-card" href="#vip" aria-label="VIP card discount" data-offer-if="vipEnabled" hidden>
                 <span class="hero-vip-label">VIP card</span>
-                <strong>20%</strong>
+                <strong><b data-offer="vipDiscount">20</b>%</strong>
                 <small>discount</small>
               </a>
             </div>
@@ -338,7 +339,7 @@
         </div>
 
         <div class="pricing-table reveal">
-          <p class="pricing-subtitle">Tow truck — cars and SUVs up to 1900 kg</p>
+          <p class="pricing-subtitle">Tow truck — cars and SUVs up to <b data-offer="maxWeightKg">2000</b> kg</p>
           <div class="pricing-rows">
             <div class="pricing-row">
               <span class="pricing-label">Within Sofia city</span>
@@ -362,16 +363,16 @@
       </div>
     </section>
 
-    <section class="section vip-section" id="vip">
+    <section class="section vip-section" id="vip" data-offer-if="vipEnabled" hidden>
       <div class="container vip-grid">
         <div class="reveal">
           <p class="eyebrow">Partner discount</p>
           <h2>Have a VIP card?</h2>
-          <p>Customers with a VIP card received from one of our partners get 20% off. Just mention it when you call.</p>
+          <p>Customers with a VIP card received from one of our partners get <b data-offer="vipDiscount">20</b>% off. Just mention it when you call.</p>
         </div>
         <div class="vip-card reveal">
           <span>VIP</span>
-          <strong>20% discount</strong>
+          <strong><b data-offer="vipDiscount">20</b>% discount</strong>
           <small>for partner customers</small>
         </div>
       </div>
@@ -566,6 +567,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3c.5 3 2.2 4.7 5 5v4c-1.8 0-3.5-.6-5-1.7V16a6 6 0 1 1-6-6c.4 0 .7 0 1 .1v4.2a2 2 0 1 0 1 1.7V3h4Z"/></svg>
           </a>
         </div>
+        <a href="/en/privacy/">Privacy</a>
         <a href="#home">Top ↑</a>
       </div>
     </div>

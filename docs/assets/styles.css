@@ -800,7 +800,7 @@ h2 {
 }
 
 .vip-card span::after {
-  content: "20%";
+  content: var(--vip-discount-label, "20%");
   display: block;
   font-size: 18px;
   line-height: 1;
@@ -1493,3 +1493,169 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Values filled from offers.js */
+b[data-offer] { font-weight: inherit; }
+[data-offer-if][hidden], [data-offer-unless][hidden] { display: none !important; }
+
+/* Hero: VIP + planned discount badges */
+.hero-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hero-planned-card {
+  color: var(--gold);
+  background: linear-gradient(180deg, #1a1a1a, #0b0b0b);
+  border-color: var(--gold);
+  transform: rotate(-1.5deg);
+}
+
+/* Hero: booking button, gold outline so the phone button stays the main action */
+.booking-cta {
+  color: var(--gold);
+  border-color: var(--gold);
+  font-weight: 900;
+}
+
+/* Booking (Calendly) */
+.booking-offer { margin-bottom: 34px; }
+.booking-offer h2 b { color: var(--gold); }
+.booking-offer-card {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 30px 26px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 50% 55%, rgba(244,196,48,.14), transparent 16rem),
+    linear-gradient(180deg, rgba(255,255,255,.065), rgba(255,255,255,.025));
+  box-shadow: var(--shadow);
+}
+.booking-offer-kicker {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.booking-offer-kicker::before, .booking-offer-kicker::after {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+  opacity: .6;
+}
+.booking-offer-big {
+  margin: 10px 0 0;
+  color: var(--gold);
+  font-size: clamp(34px, 4.4vw, 48px);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.booking-offer-sub { margin: 8px 0 0; color: var(--muted); font-weight: 700; }
+.booking-offer-card img { width: min(100%, 360px); margin: 6px 0 2px; }
+.booking-offer-btn {
+  padding: 15px 28px;
+  border-radius: 16px;
+  color: #111;
+  font-weight: 900;
+  font-size: 17px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  background: linear-gradient(135deg, var(--gold), var(--gold-2));
+  box-shadow: 0 12px 32px rgba(244,196,48,.22);
+  transition: transform .2s ease;
+}
+.booking-offer-btn:hover { transform: translateY(-2px); }
+
+@media (max-width: 760px) {
+  .booking-offer-kicker::before, .booking-offer-kicker::after { display: none; }
+}
+.booking-offer-phone { margin-top: 14px; color: var(--muted); text-decoration: none; }
+.booking-offer-phone strong { color: var(--text); white-space: nowrap; }
+
+.booking-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,.065), rgba(255,255,255,.025));
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.booking-widget { min-width: 280px; height: 720px; }
+.booking-widget--auto { height: auto; min-height: 520px; overflow: auto; }
+.booking-fallback {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;
+}
+.booking-fallback[hidden] { display: none; }
+.booking-fallback p { margin: 0; color: var(--muted); line-height: 1.65; max-width: 480px; }
+
+@media (max-width: 760px) {
+  .booking-widget { height: 900px; }
+  .booking-widget--auto { height: auto; }
+  .booking-fallback { padding: 22px; }
+}
+
+/* Header: keep phone and menu items on one line */
+.brand, .header-phone { flex-shrink: 0; }
+.nav a, .header-phone strong { white-space: nowrap; }
+.site-header .container { width: min(1340px, calc(100% - 32px)); }
+
+@media (min-width: 1221px) and (max-width: 1380px) {
+  .header-socials { display: none; }
+}
+
+/* Not enough room for the full menu: hamburger, phone button stays visible */
+@media (min-width: 761px) and (max-width: 1220px) {
+  .header-socials { display: inline-flex; margin-left: auto; }
+  .menu-toggle { display: block; margin-left: 0; }
+
+  .nav {
+    position: absolute;
+    right: 16px;
+    top: 78px;
+    width: 280px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px;
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: rgba(7,7,7,.97);
+    box-shadow: var(--shadow);
+  }
+
+  .nav.open { display: flex; }
+  .nav a { padding: 15px 16px; }
+}
+
+/* Booking privacy note */
+.booking-privacy { margin: 14px 0 0; color: var(--muted); font-size: 14px; text-align: center; }
+.booking-privacy a { color: var(--gold); }
+
+/* Privacy policy pages */
+.legal-header .header-phone { margin-left: auto; }
+.legal { max-width: 780px; }
+.legal h1 { margin: 0 0 6px; font-size: clamp(32px, 5vw, 46px); }
+.legal h2 { margin: 34px 0 10px; color: var(--gold); font-size: 21px; }
+.legal p, .legal li { color: var(--muted); line-height: 1.7; }
+.legal li { margin-bottom: 6px; }
+.legal li strong { color: var(--text); }
+.legal a { color: var(--gold); }
+.legal-back { display: inline-block; margin-bottom: 22px; text-decoration: none; }
+.legal-updated { font-size: 14px; }

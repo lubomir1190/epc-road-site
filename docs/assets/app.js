@@ -1,4 +1,20 @@
 const cfg = window.SITE_CONTENT || {};
+const offers = window.OFFERS || {};
+
+// Discount/condition numbers from offers.js; the HTML holds the same values as fallback
+document.querySelectorAll("[data-offer]").forEach(el => {
+  const value = offers[el.dataset.offer];
+  if (value !== undefined) el.textContent = value;
+});
+if (offers.vipDiscount !== undefined) {
+  document.documentElement.style.setProperty("--vip-discount-label", `"${offers.vipDiscount}%"`);
+}
+// data-offer-if="a b": shown only when all flags are true; data-offer-unless="c": hidden when any is true
+document.querySelectorAll("[data-offer-if], [data-offer-unless]").forEach(el => {
+  const ifKeys = (el.dataset.offerIf || "").split(" ").filter(Boolean);
+  const unlessKeys = (el.dataset.offerUnless || "").split(" ").filter(Boolean);
+  el.hidden = !ifKeys.every(key => offers[key]) || unlessKeys.some(key => offers[key]);
+});
 
 document.querySelectorAll("[data-phone-text]").forEach(el => {
   el.textContent = cfg.phoneDisplay || el.textContent;
@@ -96,3 +112,85 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowRight") showNext();
   if (e.key === "ArrowLeft") showPrev();
 });
+
+// Booking widget (Calendly or Cal.com, picked from the bookingUrl host) —
+// the script loads only when the section nears the viewport
+const bookingWidget = document.getElementById("bookingWidget");
+const bookingFallback = document.getElementById("bookingFallback");
+
+function loadBookingWidget() {
+  const url = new URL(cfg.bookingUrl);
+  if (url.hostname.endsWith("cal.com")) loadCalComWidget(url);
+  else loadCalendlyWidget(url);
+}
+
+function loadCalComWidget(url) {
+  bookingWidget.classList.add("booking-widget--auto");
+  // Official Cal.com embed loader: queues calls on window.Cal until embed.js arrives
+  (function (C, A, L) {
+    const p = (a, ar) => { a.q.push(ar); };
+    const d = C.document;
+    C.Cal = C.Cal || function () {
+      const cal = C.Cal;
+      const ar = arguments;
+      if (!cal.loaded) {
+        cal.ns = {};
+        cal.q = cal.q || [];
+        d.head.appendChild(d.createElement("script")).src = A;
+        cal.loaded = true;
+      }
+      if (ar[0] === L) {
+        const api = function () { p(api, arguments); };
+        const namespace = ar[1];
+        api.q = api.q || [];
+        if (typeof namespace === "string") {
+          cal.ns[namespace] = cal.ns[namespace] || api;
+          p(cal.ns[namespace], ar);
+          p(cal, ["initNamespace", namespace]);
+        } else p(cal, ar);
+        return;
+      }
+      p(cal, ar);
+    };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  window.Cal("init", "booking", { origin: "https://app.cal.com" });
+  window.Cal.ns.booking("inline", {
+    elementOrSelector: "#bookingWidget",
+    calLink: url.pathname.replace(/^\/|\/$/g, ""),
+    config: { theme: "dark", layout: "month_view" },
+  });
+  window.Cal.ns.booking("ui", {
+    theme: "dark",
+    cssVarsPerTheme: { dark: { "cal-brand": "#f4c430" } },
+    layout: "month_view",
+  });
+}
+
+function loadCalendlyWidget(url) {
+  url.searchParams.set("hide_gdpr_banner", "1");
+  url.searchParams.set("background_color", "111111");
+  url.searchParams.set("text_color", "f8f8f8");
+  url.searchParams.set("primary_color", "f4c430");
+
+  const script = document.createElement("script");
+  script.src = "https://assets.calendly.com/assets/external/widget.js";
+  script.async = true;
+  script.onload = () => {
+    window.Calendly.initInlineWidget({ url: url.toString(), parentElement: bookingWidget });
+  };
+  document.head.appendChild(script);
+}
+
+if (bookingWidget && cfg.bookingUrl) {
+  bookingFallback.hidden = true;
+  const bookingObserver = new IntersectionObserver((entries) => {
+    if (entries.some(entry => entry.isIntersecting)) {
+      bookingObserver.disconnect();
+      loadBookingWidget();
+    }
+  }, { rootMargin: "400px 0px" });
+  bookingObserver.observe(bookingWidget);
+} else {
+  bookingWidget?.remove();
+}

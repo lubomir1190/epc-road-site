@@ -17,4 +17,20 @@
     <xhtml:link rel="alternate" hreflang="bg" href="https://www.epc24.bg/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.epc24.bg/en/"/>
   </url>
+  <url>
+    <loc>https://www.epc24.bg/privacy/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://www.epc24.bg/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.epc24.bg/en/privacy/"/>
+  </url>
+  <url>
+    <loc>https://www.epc24.bg/en/privacy/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://www.epc24.bg/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.epc24.bg/en/privacy/"/>
+  </url>
 </urlset>

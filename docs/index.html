@@ -141,7 +141,7 @@
       "@type": "Offer",
       "price": "60",
       "priceCurrency": "EUR",
-      "description": "Репатрак в гр. София — леки автомобили и джипове до 1900 кг"
+      "description": "Репатрак в гр. София — леки автомобили и джипове до 2000 кг"
     },
     "availableChannel": {
       "@type": "ServiceChannel",
@@ -184,14 +184,6 @@
           "@type": "Answer",
           "text": "Обслужваме София, всички квартали, Софийска област и близките градове — Банкя, Самоков, Ботевград, Елин Пелин, Костинброд, Сливница, Своге и околностите."
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Има ли отстъпка с ВИП карта?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Да. Клиенти с ВИП карта от партньор получават 20% отстъпка при обаждане."
-        }
       }
     ]
   }
@@ -199,6 +191,7 @@
 
   <link rel="stylesheet" href="assets/styles.css" />
   <script defer src="assets/content.js"></script>
+  <script defer src="assets/offers.js"></script>
   <script defer src="assets/app.js"></script>
 </head>
 
@@ -229,6 +222,7 @@
         <a href="#home">Начало</a>
         <a href="#services">Услуги / Цени</a>
         <a href="#gallery">Галерия</a>
+        <a href="#booking">Резервация</a>
         <a href="#contacts">Контакти</a>
         <a href="#partners">Партньори</a>
         <a href="/en/">🇬🇧 EN</a>
@@ -251,11 +245,18 @@
             <img class="hero-epc-logo" src="assets/images/epc-logo-cut.png" alt="EPC Пътна помощ София">
             <div class="hero-title-row">
               <h1><span>Денонощна пътна помощ в София и областта</span></h1>
-              <a class="hero-vip-card" href="#vip" aria-label="ВИП карта 20 процента отстъпка">
-                <span class="hero-vip-label">VIP карта</span>
-                <strong>20%</strong>
-                <small>отстъпка</small>
-              </a>
+              <div class="hero-badges">
+                <a class="hero-vip-card" href="#vip" aria-label="ВИП карта — отстъпка" data-offer-if="vipEnabled" hidden>
+                  <span class="hero-vip-label">VIP карта</span>
+                  <strong><b data-offer="vipDiscount">20</b>%</strong>
+                  <small>отстъпка</small>
+                </a>
+                <a class="hero-vip-card hero-planned-card" href="#booking" aria-label="Планирано репатриране — отстъпка">
+                  <span class="hero-vip-label">Планирано</span>
+                  <strong><b data-offer="plannedDiscount">30</b>%</strong>
+                  <small>отстъпка</small>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -267,6 +268,7 @@
                 <strong data-phone-text>0877 360 333</strong>
               </span>
             </a>
+            <a class="secondary-btn booking-cta" href="#booking">Запази час сега</a>
             <a class="secondary-btn" href="#services">Виж услугите</a>
           </div>
 
@@ -336,7 +338,7 @@
         </div>
 
         <div class="pricing-table reveal">
-          <p class="pricing-subtitle">Репатрак — леки автомобили и джипове до 1900 кг</p>
+          <p class="pricing-subtitle">Репатрак — леки автомобили и джипове до <b data-offer="maxWeightKg">2000</b> кг</p>
           <div class="pricing-rows">
             <div class="pricing-row">
               <span class="pricing-label">В гр. София</span>
@@ -351,6 +353,7 @@
             <li>Цената включва товарене, превоз и разтоварване</li>
             <li>Липсващо колело <strong>+ 50 € / 97.79 лв</strong> на брой</li>
             <li>Нощна тарифа (21:00 – 07:00) и национални празници <strong>+ 50%</strong> върху цената</li>
+            <li>Планирано репатриране с <a href="#booking">онлайн резервация</a> <strong>− <b data-offer="plannedDiscount">30</b>%</strong></li>
           </ul>
         </div>
 
@@ -360,16 +363,16 @@
       </div>
     </section>
 
-    <section class="section vip-section" id="vip">
+    <section class="section vip-section" id="vip" data-offer-if="vipEnabled" hidden>
       <div class="container vip-grid">
         <div class="reveal">
           <p class="eyebrow">Партньорска отстъпка</p>
           <h2>Имаш ВИП карта?</h2>
-          <p>Клиенти с ВИП карта, получена от наш партньор, получават 20% отстъпка. При обаждане просто кажи, че имаш ВИП карта.</p>
+          <p>Клиенти с ВИП карта, получена от наш партньор, получават <b data-offer="vipDiscount">20</b>% отстъпка. При обаждане просто кажи, че имаш ВИП карта.</p>
         </div>
         <div class="vip-card reveal">
           <span>VIP</span>
-          <strong>20% отстъпка</strong>
+          <strong><b data-offer="vipDiscount">20</b>% отстъпка</strong>
           <small>за клиенти на партньори</small>
         </div>
       </div>
@@ -475,6 +478,49 @@
       </div>
     </section>
 
+    <section class="section vip-section booking-section" id="booking">
+      <div class="container">
+        <div class="vip-grid booking-offer">
+          <div class="reveal">
+            <p class="eyebrow">Онлайн резервация</p>
+            <h2>Планирай и спести <b data-offer="plannedDiscount">30</b>%</h2>
+            <p>Когато транспортът не е спешен — до сервиз, преглед, гараж или нов собственик — запази ден и час онлайн и получи отстъпка. При авария се обади директно.</p>
+            <ul class="check-list">
+              <li>Леки автомобили и джипове до <b data-offer="maxWeightKg">2000</b> кг</li>
+              <li>Резервация поне <b data-offer="minNoticeHours">24</b> ч. предварително</li>
+              <li data-offer-if="vipEnabled combineWithVip" hidden>Комбинира се с ВИП картата</li>
+              <li data-offer-if="vipEnabled" data-offer-unless="combineWithVip" hidden>Не се комбинира с ВИП картата</li>
+            </ul>
+          </div>
+          <div class="booking-offer-card reveal">
+            <div class="booking-offer-kicker">Планирано репатриране</div>
+            <div class="booking-offer-big"><b data-offer="plannedDiscount">30</b>% отстъпка</div>
+            <div class="booking-offer-sub">за автомобили до <b data-offer="maxWeightKg">2000</b> кг</div>
+            <img src="assets/images/truck2.png" alt="Репатрак EPC" loading="lazy">
+            <a class="booking-offer-btn" href="#bookingCard">Запази час сега</a>
+            <a class="booking-offer-phone" href="tel:+359877360333" data-phone-link>
+              или се обади <strong data-phone-text>0877 360 333</strong>
+            </a>
+          </div>
+        </div>
+
+        <div class="booking-card reveal" id="bookingCard">
+          <div class="booking-widget" id="bookingWidget"></div>
+          <div class="booking-fallback" id="bookingFallback">
+            <p>Онлайн резервациите скоро ще бъдат достъпни. Дотогава се обади на телефона.</p>
+            <a class="primary-call" href="tel:+359877360333" data-phone-link>
+              <span class="call-icon">☎</span>
+              <span>
+                <small>Натисни за обаждане</small>
+                <strong data-phone-text>0877 360 333</strong>
+              </span>
+            </a>
+          </div>
+        </div>
+        <p class="booking-privacy">Данните от резервацията се обработват съгласно <a href="/privacy/">Политиката за поверителност</a>.</p>
+      </div>
+    </section>
+
     <section class="section contact-section" id="contacts">
       <div class="container contact-grid">
         <div class="contact-box reveal">
@@ -527,9 +573,9 @@
             <summary>Къде обслужвате?</summary>
             <p>София, Софийска област и околностите.</p>
           </details>
-          <details class="faq-item reveal">
+          <details class="faq-item reveal" data-offer-if="vipEnabled" hidden>
             <summary>Има ли отстъпка с ВИП карта?</summary>
-            <p>Да. Клиенти с ВИП карта от партньор получават 20% отстъпка.</p>
+            <p>Да. Клиенти с ВИП карта от партньор получават <b data-offer="vipDiscount">20</b>% отстъпка.</p>
           </details>
         </div>
       </div>
@@ -566,6 +612,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3c.5 3 2.2 4.7 5 5v4c-1.8 0-3.5-.6-5-1.7V16a6 6 0 1 1-6-6c.4 0 .7 0 1 .1v4.2a2 2 0 1 0 1 1.7V3h4Z"/></svg>
           </a>
         </div>
+        <a href="/privacy/">Поверителност</a>
         <a href="#home">Нагоре ↑</a>
       </div>
     </div>

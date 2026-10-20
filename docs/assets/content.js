@@ -5,6 +5,11 @@ window.SITE_CONTENT = {
   phoneDisplay: "0877 360 333",
   phoneHref: "+359877360333",
 
+  // Линк към страницата за резервации — Calendly ("https://calendly.com/epc24/30min")
+  // или Cal.com ("https://cal.com/epc24/sofia"). Сайтът сам разпознава коя услуга е.
+  // Ако е празен, в секция „Резервация“ се показва само съобщение и бутон за обаждане.
+  bookingUrl: "https://cal.com/epc-putna-pomosht-zvo7qz",
+
   partners: [
     { name: "EPC", image: "assets/images/epc-logo-gold.png", url: "https://www.facebook.com/EvtimovPerformanceCenter" },  
     { name: "Legion Broker", image: "assets/images/legion.png", url: "https://legionbroker.bg/" },
