@@ -807,13 +807,13 @@ h2 {
   margin-top: 2px;
 }
 
-.partners-grid .partner-card:first-child {
+.partners-grid .partner-card.is-highlight {
   background:
     radial-gradient(circle at center, rgba(244,196,48,.16), transparent 13rem),
     linear-gradient(180deg, #111, #000);
 }
 
-.partners-grid .partner-card:first-child img {
+.partners-grid .partner-card.is-highlight img {
   max-height: 210px;
   padding: 22px;
   background: #050505;
@@ -821,7 +821,7 @@ h2 {
   filter: contrast(1.12) brightness(1.05);
 }
 
-.partners-grid .partner-card:first-child span {
+.partners-grid .partner-card.is-highlight span {
   color: var(--gold);
   letter-spacing: .08em;
 }
@@ -831,7 +831,7 @@ h2 {
 }
 
 @media (max-width: 760px) {
-  .partners-grid .partner-card:first-child img {
+  .partners-grid .partner-card.is-highlight img {
     max-height: 185px;
   }
 }
@@ -885,13 +885,13 @@ h2 {
 }
 
 /* Better EPC partner logo treatment */
-.partners-grid .partner-card:first-child {
+.partners-grid .partner-card.is-highlight {
   background:
     radial-gradient(circle at center, rgba(244,196,48,.20), transparent 12rem),
     linear-gradient(180deg, #111, #000) !important;
 }
 
-.partners-grid .partner-card:first-child img {
+.partners-grid .partner-card.is-highlight img {
   max-height: 205px !important;
   background: transparent !important;
   border: 0 !important;

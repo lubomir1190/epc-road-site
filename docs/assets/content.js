@@ -11,14 +11,14 @@ window.SITE_CONTENT = {
   bookingUrl: "https://cal.com/epc-putna-pomosht-zvo7qz",
 
   partners: [
-    { name: "EPC", image: "assets/images/epc-logo-gold.png", url: "https://www.facebook.com/EvtimovPerformanceCenter" },  
+    { name: "PowerHold", image: "assets/images/powerhold.png", url: "https://powerhold.bg" },
+    { name: "EPC", highlight: true, image: "assets/images/epc-logo-gold.png", url: "https://www.facebook.com/EvtimovPerformanceCenter" },  
     { name: "Legion Broker", image: "assets/images/legion.png", url: "https://legionbroker.bg/" },
     { name: "Бент Ойл АД", image: "assets/images/partner1.jpg", url: "https://www.bentoil.com/" },
     { name: "Аргомаркет", image: "assets/images/partner2.png", url: "https://argo-market.com/" },
     { name: "13 Авто школа", image: "assets/images/13avto.png", url: "https://avtoshkola13.bg" },
     { name: "ВВЦ Ауто", image: "assets/images/vvc-auto.png", url: "https://vvc-auto.mobile.bg/" },
     { name: "Online Sapani", image: "assets/images/onlinesapani.png", url: "https://onlinesapani.com/" },
-    { name: "Power Hold", image: "assets/images/powerhold.png", url: "https://www.facebook.com/profile.php?id=61582219953870#" },
     { name: "Extreme Service", image: "assets/images/extreme-service.jpg", url: "https://m.facebook.com/pages/Extreme-Service/179971012138353" },
     { name: "Team Mark", image: "assets/images/teammark.webp", url: "https://www.team-mark.com" },
     { name: "Д енд Д Авто Сервиз", image: "assets/images/ddauto.png", url: "https://ddauto.bg/" }

@@ -30,7 +30,7 @@ if (partnersGrid && Array.isArray(cfg.partners)) {
     const tag = partner.url && partner.url !== "#" ? "a" : "div";
     const href = tag === "a" ? ` href="${partner.url}" target="_blank" rel="noopener"` : "";
     return `
-      <${tag} class="partner-card reveal"${href}>
+      <${tag} class="partner-card${partner.highlight ? " is-highlight" : ""} reveal"${href}>
         <img src="${partner.image}" alt="${partner.name}" loading="lazy">
         <span>${partner.name}</span>
       </${tag}>
