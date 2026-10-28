@@ -11,7 +11,7 @@ window.SITE_CONTENT = {
   bookingUrl: "https://cal.com/epc-putna-pomosht-zvo7qz",
 
   partners: [
-    { name: "PowerHold", image: "assets/images/powerhold.webp", url: "https://powerhold.bg" },
+    { name: "PowerHold", image: "assets/images/powerhold-new.png", url: "https://powerhold.bg" },
     { name: "EPC", highlight: true, image: "assets/images/epc-logo-gold.png", url: "https://www.facebook.com/EvtimovPerformanceCenter" },  
     { name: "Legion Broker", image: "assets/images/legion.webp", url: "https://legionbroker.bg/" },
     { name: "Бент Ойл АД", image: "assets/images/partner1.webp", url: "https://www.bentoil.com/" },
